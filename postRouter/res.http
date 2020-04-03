@@ -1,0 +1,26 @@
+POST http://192.168.2.10:3000/posts
+Content-Type: application/json
+
+{
+    "author": "Nirvana",
+    "poem": "Smell's like teen spirit"
+}
+
+###
+PUT http://192.168.2.10:3000/posts/5e877fb8d896ac090d6b36f9
+Content-Type: application/json
+
+{
+    "author": "Nirvana",
+    "poem": "Hello World"
+}
+
+###
+GET http://192.168.2.10:3000/posts
+
+###
+GET http://192.168.2.10:3000/posts/5e877f60d896ac090d6b36f8
+
+
+###
+DELETE  http://192.168.2.10:3000/posts/5e877fb8d896ac090d6b36f9
