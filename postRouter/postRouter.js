@@ -4,11 +4,15 @@ const postModel = require('../models/postModel')
 
 
 postRouter.get('/', (req, res) => {
+    var test = '<h1>List of bands:</h1>'
     postModel.find((error, data) => {
         if(data){
-            res.json(data)
+            data.forEach(name => {
+                test = test + "<h3>" + name.author +"</h3>"
+            })
+            res.send(test)
         } else {
-            res.send("No records")
+            res.send("<h1>No records</h1>")
             console.log(error)
         }
     })
